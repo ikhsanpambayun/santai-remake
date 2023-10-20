@@ -1,13 +1,14 @@
 "use client";
 
 import { React, useEffect, useState } from "react";
-import { useRouter } from "next/navigation.js";
+import { useRouter, usePathname } from "next/navigation.js";
 import Image from "next/image.js";
 import ItemCard from "@/components/ItemCard.jsx";
 
 const page = ({ params }) => {
   const router = useRouter();
   const [data, setData] = useState({});
+  const currentPath = usePathname();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +20,11 @@ const page = ({ params }) => {
 
   if (!data.desc)
     return (
-      <div className="container mx-auto px-5 min-h-screen">loading...</div>
+      <div className="flex h-screen w-screen">
+        <p className="self-center h-fit w-fit m-auto text-center align-middle">
+          loading...
+        </p>
+      </div>
     );
 
   return (
@@ -68,7 +73,7 @@ const page = ({ params }) => {
             name={product.name}
             category={product.category}
             hoverText="See Details"
-            link={`/catalogue/heritage/${product.id}`}
+            link={`${currentPath}/${product.id}?category=${params.category}`}
           />
         ))}
       </div>

@@ -3,11 +3,11 @@ import ItemCard from "@/components/ItemCard";
 
 const page = () => {
   return (
-    <div className="container mx-auto px-5 min-h-screen my-10 space-y-10">
+    <div className="container mx-auto px-5 min-h-screen my-16 space-y-16">
       <h1 className="lg:text-5xl text-4xl underline underline-offset-4 w-fit">
         Our Catalogue
       </h1>
-      <div className="flex flex-wrap gap-6 justify-center">
+      <div className="flex flex-wrap gap-x-6 gap-y-8 justify-center">
         <ItemCard
           imgSrc="/assets/images/catalogue/1.png"
           name="Kursi Santai"

@@ -12,7 +12,7 @@ const page = () => {
         className="lg:absolute flex right-0 -z-10 xl:w-[700px] lg:w-[450px] lg:h-fit h-[300px] w-full"
         alt="bg img"
       ></Image>
-      <div className="container mx-auto px-5 space-y-6 mb-6">
+      <div className="container mx-auto px-5 min-h-screen my-16 space-y-16">
         <h1 className="lg:text-5xl text-4xl underline underline-offset-4 w-fit mt-10">
           About Us
         </h1>
